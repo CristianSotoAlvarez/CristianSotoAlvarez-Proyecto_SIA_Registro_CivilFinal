@@ -16,7 +16,7 @@ public class MenuView extends javax.swing.JFrame {
     
     public MenuView() {
         initComponents();
-        this.setSize(1110, 650);
+        this.setSize(1110, 690);
         this.setResizable(false);
         this.setTitle("Registro civil");
         this.setLocationRelativeTo(null);
@@ -36,7 +36,22 @@ public class MenuView extends javax.swing.JFrame {
         jcb_eCivil_mod.setEnabled(false);
         txt_dateNaci_mod.setEditable(false);
         txt_lugarNaci_mod.setEditable(false);
-        jcb_eCivil_mod.setSelectedIndex(-1);
+        txt_dateMatrimonio_mod.setEditable(false);
+        
+        txt_name_del.setEditable(false);
+        txt_eCivil_del.setEditable(false);
+        txt_dateNaci_del.setEditable(false);
+        txt_lugarNaci_del.setEditable(false);
+        
+        txt_direcOff_mod.setEditable(false);
+        txt_comunaOff_mod.setEditable(false);
+        jcb_region_mod.setEnabled(false);
+        
+        txt_direcOff_del.setEditable(false);
+        txt_comunaOff_del.setEditable(false);
+        txt_regionOff_del.setEditable(false);
+        
+        jcb_eCivil_mod.setSelectedIndex(0);
     }
     
     public void ocultarTBs(){       
@@ -45,6 +60,8 @@ public class MenuView extends javax.swing.JFrame {
         TB_certificados.setVisible(false);
         TB_defunciones.setVisible(false);
         TB_modificar.setVisible(false);
+        TB_eliminar.setVisible(false);
+        TB_funcionalidades.setVisible(false);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -58,7 +75,9 @@ public class MenuView extends javax.swing.JFrame {
         btn_mostrar = new javax.swing.JButton();
         btn_certificados = new javax.swing.JButton();
         btn_defunciones = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btn_modificar = new javax.swing.JButton();
+        btn_eliminar = new javax.swing.JButton();
+        btn_funcionalidades = new javax.swing.JButton();
         pnl_logo = new javax.swing.JPanel();
         jlabel1 = new javax.swing.JLabel();
         pnl_azul = new javax.swing.JPanel();
@@ -141,6 +160,8 @@ public class MenuView extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jcb_eCivil_mod = new javax.swing.JComboBox<>();
         btn_persona_mod = new javax.swing.JButton();
+        txt_dateMatrimonio_mod = new javax.swing.JTextField();
+        jLabel47 = new javax.swing.JLabel();
         pnl_MODoficina = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
@@ -152,6 +173,41 @@ public class MenuView extends javax.swing.JFrame {
         txt_direcOff_mod = new javax.swing.JTextField();
         jcb_region_mod = new javax.swing.JComboBox<>();
         btn_oficina_mod = new javax.swing.JButton();
+        TB_eliminar = new javax.swing.JTabbedPane();
+        pnl_DELpersona = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        txt_rut_del = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        txt_name_del = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        txt_dateNaci_del = new javax.swing.JTextField();
+        jLabel40 = new javax.swing.JLabel();
+        txt_eCivil_del = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        btn_persona_del = new javax.swing.JButton();
+        txt_lugarNaci_del = new javax.swing.JTextField();
+        pnl_DELoficina = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        txt_idOff_del = new javax.swing.JTextField();
+        txt_comunaOff_del = new javax.swing.JTextField();
+        txt_direcOff_del = new javax.swing.JTextField();
+        btn_oficina_del = new javax.swing.JButton();
+        txt_regionOff_del = new javax.swing.JTextField();
+        TB_funcionalidades = new javax.swing.JTabbedPane();
+        pnl_MODoficina1 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        txt_year_searchDif = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        table_personaDif = new javax.swing.JTable();
+        btn_search_dif = new javax.swing.JButton();
+        btn_reporte = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -185,7 +241,7 @@ public class MenuView extends javax.swing.JFrame {
                 btn_AgregarActionPerformed(evt);
             }
         });
-        pnl_opciones.add(btn_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 170, 40));
+        pnl_opciones.add(btn_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 170, 40));
 
         btn_mostrar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn_mostrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mostrar.png"))); // NOI18N
@@ -199,7 +255,7 @@ public class MenuView extends javax.swing.JFrame {
                 btn_mostrarActionPerformed(evt);
             }
         });
-        pnl_opciones.add(btn_mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 170, 40));
+        pnl_opciones.add(btn_mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 170, 40));
 
         btn_certificados.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn_certificados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/documento.png"))); // NOI18N
@@ -210,28 +266,49 @@ public class MenuView extends javax.swing.JFrame {
                 btn_certificadosActionPerformed(evt);
             }
         });
-        pnl_opciones.add(btn_certificados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 170, 40));
+        pnl_opciones.add(btn_certificados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 170, 40));
 
         btn_defunciones.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn_defunciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/defunción.png"))); // NOI18N
-        btn_defunciones.setText("Defunciones");
+        btn_defunciones.setText(" Defunciones");
         btn_defunciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_defunciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_defuncionesActionPerformed(evt);
             }
         });
-        pnl_opciones.add(btn_defunciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 170, 40));
+        pnl_opciones.add(btn_defunciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 170, 40));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/editar.png"))); // NOI18N
-        jButton1.setText(" Modificar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_modificar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btn_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/editar.png"))); // NOI18N
+        btn_modificar.setText("  Modificar");
+        btn_modificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_modificarActionPerformed(evt);
             }
         });
-        pnl_opciones.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 170, 40));
+        pnl_opciones.add(btn_modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 170, 40));
+
+        btn_eliminar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btn_eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminar.png"))); // NOI18N
+        btn_eliminar.setText(" Eliminar");
+        btn_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_eliminarActionPerformed(evt);
+            }
+        });
+        pnl_opciones.add(btn_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 170, 40));
+
+        btn_funcionalidades.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btn_funcionalidades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/funcionalidades.png"))); // NOI18N
+        btn_funcionalidades.setText("Funcionalidades");
+        btn_funcionalidades.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_funcionalidades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_funcionalidadesActionPerformed(evt);
+            }
+        });
+        pnl_opciones.add(btn_funcionalidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 170, 40));
 
         pnl_fondo.add(pnl_opciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 170, 520));
 
@@ -581,12 +658,23 @@ public class MenuView extends javax.swing.JFrame {
         jLabel29.setText("Estado civil :");
         pnl_MODpersona.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
-        jcb_eCivil_mod.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Casado/a", "Soltero/a", "Viudo/a", "Divorciado/a", "Separado/a", "Conviviente" }));
+        jcb_eCivil_mod.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona una opción", "Casado/a", "Soltero/a", "Viudo/a", "Divorciado/a", "Separado/a", "Conviviente" }));
         pnl_MODpersona.add(jcb_eCivil_mod, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, -1, -1));
 
         btn_persona_mod.setText("Modificar");
         btn_persona_mod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnl_MODpersona.add(btn_persona_mod, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 90, 30));
+
+        txt_dateMatrimonio_mod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_dateMatrimonio_modActionPerformed(evt);
+            }
+        });
+        pnl_MODpersona.add(txt_dateMatrimonio_mod, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 80, -1));
+
+        jLabel47.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel47.setText("Fecha de matrimonio :");
+        pnl_MODpersona.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
 
         TB_modificar.addTab("Persona", pnl_MODpersona);
 
@@ -633,6 +721,150 @@ public class MenuView extends javax.swing.JFrame {
         TB_modificar.addTab("Oficina", pnl_MODoficina);
 
         pnl_TBs.add(TB_modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 520));
+
+        pnl_DELpersona.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel35.setText("Eliminar una persona");
+        pnl_DELpersona.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
+
+        jLabel36.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel36.setText("RUT :");
+        pnl_DELpersona.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+
+        txt_rut_del.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_rut_delActionPerformed(evt);
+            }
+        });
+        pnl_DELpersona.add(txt_rut_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 90, -1));
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel37.setText("Nombre completo :");
+        pnl_DELpersona.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+        pnl_DELpersona.add(txt_name_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 280, -1));
+
+        jLabel38.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel38.setText("(con puntos y guion)");
+        pnl_DELpersona.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+
+        jLabel39.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel39.setText("Fecha de nacimiento :");
+        pnl_DELpersona.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
+
+        txt_dateNaci_del.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_dateNaci_delActionPerformed(evt);
+            }
+        });
+        pnl_DELpersona.add(txt_dateNaci_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 100, -1));
+
+        jLabel40.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel40.setText("Lugar de nacimiento :");
+        pnl_DELpersona.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+        pnl_DELpersona.add(txt_eCivil_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 100, -1));
+
+        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel41.setText("Estado civil :");
+        pnl_DELpersona.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+
+        btn_persona_del.setText("Eliminar");
+        btn_persona_del.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnl_DELpersona.add(btn_persona_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 90, 30));
+        pnl_DELpersona.add(txt_lugarNaci_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 220, -1));
+
+        TB_eliminar.addTab("Persona", pnl_DELpersona);
+
+        pnl_DELoficina.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel42.setText("Eliminar una oficina");
+        pnl_DELoficina.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
+
+        jLabel43.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel43.setText("Identificador : ");
+        pnl_DELoficina.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+
+        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel44.setText("Región : ");
+        pnl_DELoficina.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+
+        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel45.setText("Comuna :");
+        pnl_DELoficina.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+
+        jLabel46.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel46.setText("Dirección :");
+        pnl_DELoficina.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+
+        txt_idOff_del.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        pnl_DELoficina.add(txt_idOff_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 120, -1));
+        pnl_DELoficina.add(txt_comunaOff_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 160, -1));
+        pnl_DELoficina.add(txt_direcOff_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 230, -1));
+
+        btn_oficina_del.setText("Eliminar");
+        btn_oficina_del.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_oficina_del.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_oficina_delActionPerformed(evt);
+            }
+        });
+        pnl_DELoficina.add(btn_oficina_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 90, 30));
+        pnl_DELoficina.add(txt_regionOff_del, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 360, -1));
+
+        TB_eliminar.addTab("Oficina", pnl_DELoficina);
+
+        pnl_TBs.add(TB_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 520));
+
+        pnl_MODoficina1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel48.setText("Buscar difuntos por año");
+        pnl_MODoficina1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
+
+        jLabel49.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel49.setText("Año :");
+        pnl_MODoficina1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+
+        txt_year_searchDif.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        pnl_MODoficina1.add(txt_year_searchDif, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 80, -1));
+
+        table_personaDif.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        table_personaDif.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "RUT", "Nombre Completo", "Fecha Nacimiento", "Lugar Nacimiento", "Fecha defunción"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(table_personaDif);
+
+        pnl_MODoficina1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 700, 180));
+
+        btn_search_dif.setText("Buscar");
+        btn_search_dif.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_search_difActionPerformed(evt);
+            }
+        });
+        pnl_MODoficina1.add(btn_search_dif, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
+
+        btn_reporte.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_reporte.setText("Generar reporte");
+        pnl_MODoficina1.add(btn_reporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 210, 30));
+
+        TB_funcionalidades.addTab("Buscar difuntos", pnl_MODoficina1);
+
+        pnl_TBs.add(TB_funcionalidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 520));
 
         pnl_fondo.add(pnl_TBs, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 940, 520));
 
@@ -706,10 +938,40 @@ public class MenuView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcb_region_modActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modificarActionPerformed
         ocultarTBs();
         TB_modificar.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_modificarActionPerformed
+
+    private void btn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarActionPerformed
+        ocultarTBs();
+        TB_eliminar.setVisible(true);
+    }//GEN-LAST:event_btn_eliminarActionPerformed
+
+    private void txt_rut_delActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_rut_delActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_rut_delActionPerformed
+
+    private void txt_dateNaci_delActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dateNaci_delActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dateNaci_delActionPerformed
+
+    private void btn_oficina_delActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_oficina_delActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_oficina_delActionPerformed
+
+    private void txt_dateMatrimonio_modActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dateMatrimonio_modActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dateMatrimonio_modActionPerformed
+
+    private void btn_funcionalidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_funcionalidadesActionPerformed
+      ocultarTBs();
+      TB_funcionalidades.setVisible(true);
+    }//GEN-LAST:event_btn_funcionalidadesActionPerformed
+
+    private void btn_search_difActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_difActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_search_difActionPerformed
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -735,6 +997,20 @@ public class MenuView extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         
         //</editor-fold>
 
@@ -750,6 +1026,8 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JTabbedPane TB_agregar;
     private javax.swing.JTabbedPane TB_certificados;
     private javax.swing.JTabbedPane TB_defunciones;
+    private javax.swing.JTabbedPane TB_eliminar;
+    private javax.swing.JTabbedPane TB_funcionalidades;
     private javax.swing.JTabbedPane TB_modificar;
     public javax.swing.JTabbedPane TB_mostrar;
     public javax.swing.JButton btn_ADDPersona;
@@ -757,12 +1035,18 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JButton btn_Agregar;
     private javax.swing.JButton btn_certificados;
     private javax.swing.JButton btn_defunciones;
+    private javax.swing.JButton btn_eliminar;
+    private javax.swing.JButton btn_funcionalidades;
     public javax.swing.JButton btn_generarCert;
+    private javax.swing.JButton btn_modificar;
     public javax.swing.JButton btn_mostrar;
+    public javax.swing.JButton btn_oficina_del;
     public javax.swing.JButton btn_oficina_mod;
+    public javax.swing.JButton btn_persona_del;
     public javax.swing.JButton btn_persona_mod;
     public javax.swing.JButton btn_registrar_def;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btn_reporte;
+    public javax.swing.JButton btn_search_dif;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -791,7 +1075,22 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -806,6 +1105,7 @@ public class MenuView extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel_7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane4;
     public javax.swing.JComboBox<String> jcb_eCivil;
     public javax.swing.JComboBox<String> jcb_eCivil_mod;
     public javax.swing.JComboBox<String> jcb_region_mod;
@@ -814,7 +1114,10 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JLabel jlabel1;
     private javax.swing.JPanel pnl_ADDoficina;
     private javax.swing.JPanel pnl_ADDpersona;
+    private javax.swing.JPanel pnl_DELoficina;
+    private javax.swing.JPanel pnl_DELpersona;
     private javax.swing.JPanel pnl_MODoficina;
+    private javax.swing.JPanel pnl_MODoficina1;
     private javax.swing.JPanel pnl_MODpersona;
     private javax.swing.JPanel pnl_MToficina;
     private javax.swing.JPanel pnl_MTpersona;
@@ -829,25 +1132,37 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_titulo;
     public javax.swing.JTable table_oficina;
     public javax.swing.JTable table_persona;
+    public javax.swing.JTable table_personaDif;
     public javax.swing.JTextField txt_cert_rut;
+    public javax.swing.JTextField txt_comunaOff_del;
     public javax.swing.JTextField txt_comunaOff_mod;
     public javax.swing.JTextField txt_comuna_off;
     public javax.swing.JTextField txt_dateMatrimonio;
+    public javax.swing.JTextField txt_dateMatrimonio_mod;
+    public javax.swing.JTextField txt_dateNaci_del;
     public javax.swing.JTextField txt_dateNaci_mod;
     public javax.swing.JTextField txt_dateNacimiento;
     public javax.swing.JTextField txt_date_def;
+    public javax.swing.JTextField txt_direcOff_del;
     public javax.swing.JTextField txt_direcOff_mod;
     public javax.swing.JTextField txt_direc_off;
+    public javax.swing.JTextField txt_eCivil_del;
+    public javax.swing.JTextField txt_idOff_del;
     public javax.swing.JTextField txt_idOff_mod;
     public javax.swing.JTextField txt_id_off;
     public javax.swing.JTextField txt_lugNacimiento;
+    public javax.swing.JTextField txt_lugarNaci_del;
     public javax.swing.JTextField txt_lugarNaci_mod;
     public javax.swing.JTextField txt_name;
+    public javax.swing.JTextField txt_name_del;
     public javax.swing.JTextField txt_name_mod;
     public javax.swing.JTextField txt_oficina_search;
+    public javax.swing.JTextField txt_regionOff_del;
     public javax.swing.JTextField txt_rut;
     public javax.swing.JTextField txt_rut_def;
+    public javax.swing.JTextField txt_rut_del;
     public javax.swing.JTextField txt_rut_mod;
     public javax.swing.JTextField txt_rut_search;
+    public javax.swing.JTextField txt_year_searchDif;
     // End of variables declaration//GEN-END:variables
 }
