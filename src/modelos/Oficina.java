@@ -2,10 +2,11 @@
 package modelos;
 
 public class Oficina {
+    private String codigoOficina;
     private String region;
     private String comuna;
     private String direccion;
-    private int codigoOficina;
+    
     
     
     public void setRegion(String region) {this.region = region;}
@@ -14,7 +15,7 @@ public class Oficina {
     
     public void setDireccion(String direccion) {this.direccion = direccion;}
 
-    public void setCodigoOficina(int codigoOficina) { this.codigoOficina = codigoOficina;}
+    public void setCodigoOficina(String codigoOficina) { this.codigoOficina = codigoOficina;}
 
     
     public String getRegion() {return region;}
@@ -23,8 +24,10 @@ public class Oficina {
 
     public String getDireccion() {return direccion;} 
 
-    public int getCodigoOficina() { return codigoOficina;}
-        
-    
-    
+    public String getCodigoOficina() { return codigoOficina;}
+
+    @Override
+    public String toString() {
+        return codigoOficina + "," + region + "," + comuna + "," + direccion;
+    }
 }

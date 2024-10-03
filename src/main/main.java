@@ -1,12 +1,12 @@
 
 package main;
 
-import vistas.menuView;
+import vistas.MenuView;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         
-        menuView ventanaPrincipal = new menuView();
+        MenuView ventanaPrincipal = new MenuView();
         ventanaPrincipal.setVisible(true);
     }
     
