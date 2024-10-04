@@ -76,8 +76,8 @@ public class Persona {
     }
 
     public void setFechaDefuncion(String fechaDefuncion) throws InvalidFutureDateException, ParseException{
-        if(fechaDefuncion.equals("")){
-            this.fechaDefuncion = fechaDefuncion; 
+        if(fechaDefuncion.equals("NR") || fechaDefuncion.equals("")){
+            this.fechaDefuncion = "NR"; 
             return;
         }
         Date fechaActual = new Date();
@@ -86,8 +86,8 @@ public class Persona {
     }
 
     public void setFechaMatrimonio(String fechaMatrimonio) throws InvalidFutureDateException, ParseException {
-        if(fechaMatrimonio.equals("")){
-            this.fechaMatrimonio = fechaMatrimonio; 
+        if(fechaMatrimonio.equals("") || fechaMatrimonio.equals("NR")){
+            this.fechaMatrimonio = "NR"; 
             return;
         }
         Date fechaActual = new Date();

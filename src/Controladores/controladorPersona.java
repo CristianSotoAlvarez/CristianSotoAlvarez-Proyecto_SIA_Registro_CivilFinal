@@ -36,11 +36,13 @@ public class ControladorPersona implements ActionListener, KeyListener, MouseLis
         this.menu.btn_persona_del.addActionListener(this);
         this.menu.btn_search_dif.addActionListener(this);
         this.menu.btn_reporte.addActionListener(this);
+        this.menu.btn_guardar.addMouseListener(this);
        
         //Dejo los text f. en escucha
         this.menu.txt_rut_search.addKeyListener(this);
         this.menu.txt_year_searchDif.addKeyListener(this);
         this.menu.txt_rut_mod.addKeyListener(this);
+        this.menu.txt_rut_del.addKeyListener(this);
         
         //Dejo el combo box en escucha
         this.menu.jcb_eCivil.addActionListener(this);
@@ -140,6 +142,7 @@ public class ControladorPersona implements ActionListener, KeyListener, MouseLis
                 }
             }
         }else if(e.getSource() == menu.btn_search_dif){
+            
             limpiarTablaDefunciones();
             listarDifuntos();
             
@@ -147,8 +150,7 @@ public class ControladorPersona implements ActionListener, KeyListener, MouseLis
             RC.generarReportePorAnio(menu.txt_year_searchDif.getText().trim());
             JOptionPane.showMessageDialog(null, "Reporte generado con éxito.");
         }
-        
-        
+              
     }
     
     public void listarTodaPersona(){
@@ -269,6 +271,9 @@ public class ControladorPersona implements ActionListener, KeyListener, MouseLis
         if(e.getSource() == menu.btn_mostrar){
             limpiarTablaSearchPersonas();
             listarTodaPersona();
+        }else if(e.getSource() == menu.btn_guardar){    
+            RC.actualizarPersona();
+            JOptionPane.showMessageDialog(null, "CSV modificado con éxito.");
         }
     }
     @Override

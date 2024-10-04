@@ -10,13 +10,13 @@ import modelos.Persona;
 
 public class MenuView extends javax.swing.JFrame {
     // Modelos
-    Control_registroCivil RC = new Control_registroCivil();
-    Persona persona = new Persona();
-    Oficina oficina = new Oficina();
+    private Control_registroCivil RC = new Control_registroCivil();
+    private Persona persona = new Persona();
+    private Oficina oficina = new Oficina();
     
     public MenuView() {
         initComponents();
-        this.setSize(1110, 690);
+        this.setSize(1110, 685);
         this.setResizable(false);
         this.setTitle("Registro civil");
         this.setLocationRelativeTo(null);
@@ -70,6 +70,8 @@ public class MenuView extends javax.swing.JFrame {
         pnl_fondo = new javax.swing.JPanel();
         pnl_titulo = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        btn_guardar = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
         pnl_opciones = new javax.swing.JPanel();
         btn_Agregar = new javax.swing.JButton();
         btn_mostrar = new javax.swing.JButton();
@@ -220,7 +222,15 @@ public class MenuView extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 55)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Registro Civil");
-        pnl_titulo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 110));
+        pnl_titulo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 510, 110));
+
+        btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/guardar.png"))); // NOI18N
+        btn_guardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnl_titulo.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, -1, -1));
+
+        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel50.setText(" Guardar");
+        pnl_titulo.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 80, -1, -1));
 
         pnl_fondo.add(pnl_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 870, 110));
 
@@ -1038,6 +1048,7 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JButton btn_eliminar;
     private javax.swing.JButton btn_funcionalidades;
     public javax.swing.JButton btn_generarCert;
+    public javax.swing.JLabel btn_guardar;
     private javax.swing.JButton btn_modificar;
     public javax.swing.JButton btn_mostrar;
     public javax.swing.JButton btn_oficina_del;
@@ -1092,6 +1103,7 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

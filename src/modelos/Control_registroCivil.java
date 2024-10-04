@@ -119,7 +119,7 @@ public class Control_registroCivil {
         for (String clave : personas.keySet()){
             Persona pp = personas.get(clave);
             
-            if(!pp.getFechaDefuncion().equals("")){
+            if(!pp.getFechaDefuncion().equals("NR")){
                 
                 String fechaDefun = pp.getFechaDefuncion();
                 String [] partes = fechaDefun.split("-");
@@ -138,6 +138,22 @@ public class Control_registroCivil {
        
        String rutaArchivo = "src/recursos/reportepersonas" + year + ".csv";
        ReporteCSV reporteCSV = new ReporteCSV(rutaArchivo);
-       reporteCSV.crearReporte(personasFiltradas);
+       reporteCSV.escribir_persona(personasFiltradas);
+   }
+    
+    public void actualizarPersona() {
+       ArrayList<Persona> personasFiltradas = listar_personas("");
+       
+       String rutaArchivo = "src/recursos/personas.csv";
+       ReporteCSV reporteCSV = new ReporteCSV(rutaArchivo);
+       reporteCSV.escribir_persona(personasFiltradas);
+   }
+    
+    public void actualizarOficina() {
+       ArrayList<Oficina> oficinasFiltradas = listar_oficinas("");
+       
+       String rutaArchivo = "src/recursos/oficinas.csv";
+       ReporteCSV reporteCSV = new ReporteCSV(rutaArchivo);
+       reporteCSV.escribir_oficina(oficinasFiltradas);
    }
 }

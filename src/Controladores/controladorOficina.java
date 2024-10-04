@@ -1,4 +1,6 @@
 
+
+
 package controladores;
 
 import java.awt.event.ActionEvent;
@@ -47,6 +49,8 @@ public class ControladorOficina implements ActionListener, KeyListener, MouseLis
         
         //Dejo texto en escucha
         this.menu.txt_idOff_mod.addKeyListener(this);
+        
+        this.menu.btn_guardar.addMouseListener(this);
         listarTodaOficina();
     }
  
@@ -89,7 +93,7 @@ public class ControladorOficina implements ActionListener, KeyListener, MouseLis
                     JOptionPane.showMessageDialog(null, "Datos modificados con éxito.");
                 }
             }
-        }else if (e.getSource()== menu.btn_oficina_del){
+        }else if (e.getSource() == menu.btn_oficina_del){
             if(menu.txt_idOff_del.getText().trim().equals("")){
                 JOptionPane.showMessageDialog(null, "Debes ingresar el ID de la oficina a eliminar");
             }else{
@@ -190,6 +194,8 @@ public class ControladorOficina implements ActionListener, KeyListener, MouseLis
         if(e.getSource() == menu.btn_mostrar){
             limpiarTabla();
             listarTodaOficina();
+        }else if(e.getSource() == menu.btn_guardar){
+            RC.actualizarOficina();   
         }
     }
 

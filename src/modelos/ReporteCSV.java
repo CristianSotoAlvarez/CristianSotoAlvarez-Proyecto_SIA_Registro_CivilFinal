@@ -14,11 +14,21 @@ public class ReporteCSV {
         this.reporte = reporte;
     }
 
-    public void crearReporte(ArrayList<Persona> personas) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(reporte,true))) {
+    public void escribir_persona(ArrayList<Persona> personas) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(reporte))) {
            
             for (Persona persona : personas) {
                 writer.write(persona.toString());
+                writer.newLine(); 
+            }
+        } catch (IOException e) {}
+    }
+    
+    public void escribir_oficina(ArrayList<Oficina> oficinas) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(reporte))) {
+           
+            for (Oficina oficina : oficinas) {
+                writer.write(oficina.toString());
                 writer.newLine(); 
             }
         } catch (IOException e) {}
